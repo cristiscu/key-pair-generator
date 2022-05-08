@@ -1,7 +1,11 @@
 Snowflake Key Pair Generator
 ============================
 
-Practical Python script that automates the creation of a [key pair for authentication to Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Practical Python script that automates the creation of a [key pair for authentication to Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). 
+
+We'll automatically generate an encrypted or unencrypted private key file, and a public key file. We'll associate the public key value with a Snowflake user, and we'll reconnect to Snowflake through the new key pair, making sure it works. 
+
+We also provide support for the key pair rotation, setting a second key when the initial connection was not done through basic authentication.
 
 # CLI Executable File
 
@@ -11,7 +15,7 @@ You can invoke the tool directly from a Terminal window in Visual Source Code, a
 
 Calling with no options will show you what commands are available:
 
-* Usage: python key-pair-generator.py options  
+Usage: python key-pair-generator.py options
 * --a account        - Snowflake account name  
 * --u user           - Snowflake user, to conect and assign the key pair  
 * --p password       - Snowflake password, when connecting with basic authentication  
